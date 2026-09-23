@@ -28,6 +28,10 @@ header .principal {
     color: var(--texto-principal);
 }
 
+header .titulo {
+    font-size: 1em;
+}
+
 header .principal * {
     margin: 0;
 }
@@ -38,9 +42,9 @@ header .logo img {
 }
 
 .divisao {
-    height: 50px;
+    height: 25px;
     background-color: #008B8B;
-    background: linear-gradient(180deg, var(--principal) 50%, #ffffff00 60%, var(--principal) 70%, #ffffff00 80%);
+    background: linear-gradient(180deg, var(--principal) 55%, #ffffff00 56%, #ffffff00 70%, var(--principal) 71%);
 }
 
 main {
@@ -70,10 +74,11 @@ footer {
 }
 
 .dropdown * {
-    text-shadow: none;
-    color: var(--secundario);
     text-decoration: none;
-    transition: .1s;
+    color: var(--secundario);
+    font-size: medium;
+    padding: 0.2em;
+    transition: .2s;
 }
 
 .dropdown *:hover {
@@ -92,61 +97,11 @@ footer {
     transition: .2s;
 }
 
-#navegacao:hover .dropdown {
+/* style para fazer o dropdown aparecer */
+#navegacao:hover .dropdown, /* Quando o mouse estiver em cima do botão de navegação... */
+#navegacao:focus .dropdown, /* ...ou quando o botão de navegação estiver em foco (selecionado)... */
+#navegacao:focus-within .dropdown, /* ...ou quando o botão de navegação ou algum elemento dentro dele estiver em foco... */
+#navegacao:active .dropdown { /* ...ou quando o botão de navegação estiver ativo (clicado), altera o estilo do dropdown */
     border-top: 0px;
     display: flex;
-}
-
-.faqzada {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px 20px 80px;
-}
- /* Aqui ou */
-.cardFaq {
-  background-color: #008B8B;
-  border: 1px solid #111;
-  border-radius: 40px;
-  margin-bottom: 20px;
-  padding: 3.5px 25px;
-  transform: scale(1.1);
-
-}
-/* ou aqui */
-.perguntinha {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  color: #e6e6e6;
-  padding: 15px 0;
-  list-style-type: style="text-decoration:underline;" 
-}
-
-
-.perguntinha:hover {
-  color: #e6e6e6;
-} 
-/* ou aqui */
-.cardFaq[open] .perguntinha {
-  color: #e6e6e6;
-  border-bottom: 2px solid #000080;
-
-
-}
-
-.respostinha {
-  color: #e6e6e6;
-  padding: 16px 0;
-
-}
-
-.introzada {
-  text-align: center;
-  padding: 10px 20px 30px;
-
-}
-
-.Perguntadas {
-  text-align: justify;
-  padding: 60px 20px 30px;
-
 }
